@@ -1,0 +1,88 @@
+@font-face {font-family: "OpenSans Regular";src: url("../fonts/OpenSansRegular.ttf");}
+@font-face {font-family: "OpenSans Semibold";src: url("../fonts/OpenSansSemiBold.ttf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/OpenSansLight.ttf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/MuseoSansCyrl-100.otf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/MuseoSansCyrl-300.otf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/MuseoSansCyrl-500.otf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/MuseoSansCyrl-700.otf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/HelveticaNeueCyr-Roman.otf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/HelveticaNeueCyr-Light.otf");}
+/* general rules */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "OpenSans Semibold", sans-serif;
+    color: #5d5147;
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+}
+
+a, a:hover, a:active, button::-moz-focus-inner, button, button:hover, button:active, input, input:hover, input:active {
+    outline: none;
+    border: none;
+}
+
+.block-content {
+    width: 98%;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 7.5% 0;
+}
+
+.form-field::-webkit-input-placeholder {font-size: 24px;color: #333333;opacity: 1;}
+.form-field::-moz-placeholder {font-size: 24px;color: #333333;opacity: 1;}
+.form-field:-moz-placeholder {font-size: 24px;color: #333333;opacity: 1;}
+.form-field:-ms-input-placeholder {font-size: 24px;color: #333333;opacity: 1;}
+.form-field:focus::-webkit-input-placeholder {color: transparent;}
+.form-field:focus::-moz-placeholder {color: transparent;}
+.form-field:focus:-moz-placeholder {color: transparent;}
+.form-field:focus:-ms-input-placeholder {color: transparent;}
+
+.clearfix {clear: both;}
+
+ul li {display: inline-block;}
+
+.text-brown {color: #be793e;}
+.text-grey {color: #999999;}
+.text-white {color: #ffffff;}
+.text-thin {font-family: "OpenSans Regular", sans-serif;font-weight: 100;}
+.text-ultra-small {font-size: 12px;}
+.text-small {font-size: 18px;}
+.text {font-size: 24px;}
+h3 {font-size: 30px;}
+h2 {
+    display: inline-block;
+    margin: 35px 0;
+    font-size: 36px;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+h1 {
+    display: block;
+    font-size: 43px;
+    letter-spacing: -2px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    display: block;
+    text-transform: uppercase;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0;
+    background: #be793e;
+    letter-spacing: 0;
+}
+
+.logo {
+    display: block;
+    width: 175px;
+    height: 44px;
+}
