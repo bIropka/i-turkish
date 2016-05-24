@@ -293,7 +293,7 @@ nav ul li a:hover {
 .in-cabinet {
     background: #ebebeb;
 }
-.in-cabinet h2:after, .teachers h2:after, .reviews h2:after {
+.in-cabinet h2:after, .teachers h2:after, .reviews h2:after, .program h2:after, .lessons-plan h2:after {
     content: '';
     display: block;
     width: 70px;
@@ -344,8 +344,70 @@ nav ul li a:hover {
     margin-top: 90px;
 }
 
+/* teachers */
+.teachers, .reviews .block-content {
+    padding: 5% 0;
+}
+.slider-teachers .slide {
+    display: block;
+    width: 180px;
+    margin: 0 30px;
+}
+.teacher-name {
+    font-family: "OpenSans Regular", sans-serif;
+    text-transform: uppercase;
+    color: #555555;
+    margin: 20px 0 5px;
+}
+.slider-teachers .text-grey {
+    font-family: "Muse-300", sans-serif;
+    font-size: 12px;
+}
+.slick-dots {
+    margin-top: 60px;
+}
+.slick-dots li {
+    margin: 0 6px;
+}
+.slick-dots li button {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #cdcdcd;
+    font-size: 0;
+    color: transparent;
+    background: #ffffff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    line-height: 0;
+}
+.slick-dots .slick-active button{
+    border: 1px solid #4eb7dd;
+    background: #4eb7dd;
+}
+/* reviews */
+.reviews {
+    background: url('../images/background-reviews.jpg') no-repeat center;
+    background-size: cover;
+}
+.slider-reviews .slide img {
+    display: block;
+    margin: 0 auto;
+}
+.slider-reviews .slide .text-grey {
+    display: inline-block;
+    width: 80%;
+    margin: 35px auto 25px;
+    font-family: "Muse-300", sans-serif;
+}
+.reviewer-info {
+    font-family: "Muse-700", sans-serif;
+}
+.reviewer-info span {
+    font-family: "Muse-300", sans-serif;
+}
 
-
+/* program */
 
 
 
