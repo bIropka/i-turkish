@@ -19,8 +19,13 @@
     color: #333333;
 }
 
-button, input[type="submit"] {
+a, button, input[type="submit"] {
     cursor: pointer;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
 }
 
 a, a:hover, a:active {
@@ -53,9 +58,6 @@ button, input {
 }
 .button-red:hover {
     background: #ff0000;
-}
-.button-red:active {
-    line-height: 42px;
 }
 
 .block-content {
@@ -101,11 +103,18 @@ h1:after {
 body {
     width: 100%;
     background: #ffffff;
+    overflow-x: hidden;
 }
 
 /* header */
 .header {
     padding: 35px 0 25px;
+}
+.header:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
 }
 .logo {
     display: inline-block;
@@ -122,6 +131,17 @@ body {
 }
 nav {
     display: inline-block;
+}
+.nav-icon {
+    display: none;
+    width: 46px;
+    height: 23px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    background: url('../images/icon-nav.png') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
 }
 nav ul li {
     margin: 0 10px;
@@ -155,9 +175,6 @@ nav ul li a:hover {
 }
 .get-callback:hover {
     background: #0199cf;
-}
-.get-callback:active {
-    line-height: 32px;
 }
 
 /* form-top */
@@ -351,6 +368,20 @@ nav ul li a:hover {
     background: url('../images/sprite-white.png') no-repeat right center;
     background-size: cover;
 }
+.in-cabinet i {
+    display: none;
+    width: 73px ;
+    height: 73px;
+    line-height: 73px;
+    font-size: 73px;
+    background: #d0d3da;
+    color: #ffffff;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .in-cabinet .button-red {
     width: 270px;
     margin-top: 90px;
@@ -364,6 +395,9 @@ nav ul li a:hover {
     display: block;
     width: 180px;
     margin: 0 30px;
+}
+.slider-teachers .slide img {
+    margin: 0 auto;
 }
 .teacher-name {
     font-family: "OpenSans Regular", sans-serif;
@@ -486,7 +520,7 @@ nav ul li a:hover {
     margin: auto;
 }
 .program table button {
-    width: 170px;
+    width: 80%;
 }
 .button-grey {
     height: 40px;
@@ -497,9 +531,6 @@ nav ul li a:hover {
 }
 .button-grey:hover {
     background: #bababa;
-}
-.button-grey:active {
-    line-height: 42px;
 }
 
 /* steps */
@@ -610,9 +641,6 @@ nav ul li a:hover {
 .get-first-lesson:hover {
     background: #ff3a3a;
     color: #ffffff;
-}
-.get-first-lesson:active {
-    line-height: 42px;
 }
 
 /* lessons-plan */
@@ -752,8 +780,253 @@ nav ul li a:hover {
 
 /* media-queries */
 @media (max-width: 1280px) {
-.form-top {
-    background: url('../images/girl.png') no-repeat 85% bottom, url('../images/background-header.jpg') no-repeat center;
-    background-size: auto 98%, cover;
+    .form-top {
+        background: url('../images/girl.png') no-repeat 85% bottom, url('../images/background-header.jpg') no-repeat center;
+        background-size: auto 98%, cover;
+    }
 }
+
+@media (max-width: 1080px) {
+    .why-we ul {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .why-we ul li {
+        display: block;
+        width: 100%;
+        margin: 0 auto 20px;
+        vertical-align: top;
+        text-align: left;
+        position: relative;
+    }
+}
+
+@media (max-width: 960px) {
+    .header {
+        padding: 20px 0 0 0;
+        position: relative;
+    }
+    .nav-icon {
+        display: block;
+    }
+    nav ul {
+        display: block;
+        width: 200px;
+        text-align: left;
+        position: absolute;
+        right: -250px;
+        top: 60px;
+        background: rgba(5, 147, 230, 0.8);
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+    }
+    nav .visible {
+        right: 0;
+    }
+    nav ul li {
+        display: block;
+    }
+    nav ul li a {
+        color: #ffffff;
+    }
+    .logo, .phone-block {
+        display: inline-block;
+        margin: 20px;
+        float: none;
+    }
+    .form-top {
+        padding-bottom: 480px;
+        background: url('../images/girl-small.png') no-repeat center bottom, url('../images/background-header.jpg') no-repeat 90% 0;
+        background-size: auto 470px, auto 100%;
+    }
+    .form-top form {
+        margin: 0 auto;
+    }
+    .for-whom ul li {
+        margin-bottom: 10px;
+    }
+    .in-cabinet ul li {
+        margin: 3px;
+        overflow: inherit;
+    }
+    .in-cabinet .hover-layer {
+        display: block;
+        position: absolute;
+        background: transparent;
+    }
+    .in-cabinet .hover-layer .text-white {
+        color: #4eb7dd;
+    }
+    .in-cabinet .hover-layer .text-white:before {
+        width: 79px;
+        height: 74px;
+        background: url('../images/zoom-blue.png') no-repeat center;
+        background-size: cover;
+    }
+    .program table td:first-child {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .program {
+        display: none;
+    }
+    .steps ul li {
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .steps ul li img {
+        width: 165px;
+        height: 155px;
+        margin: 20px auto 100px;
+    }
+    .steps ul li:last-child .step-icon {
+        margin-bottom: 0;
+    }
+    .steps ul li .step-icon {
+        margin: 0 auto;
+    }
+    .step-info {
+        position: static;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .steps ul li:nth-child(2n) .step-info {
+        text-align: center;
+    }
+    .steps ul li:after {
+        display: none;
+    }
+    .steps ul li:nth-child(1) .step-icon, .steps ul li:nth-child(2) .step-icon,
+    .steps ul li:nth-child(3) .step-icon, .steps ul li:nth-child(4) .step-icon {
+        display: block;
+        margin: 0 auto 15px;
+    }
+    .get-first-lesson {
+        margin: 0;
+    }
+    .lessons-plan ul li {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        padding: 20px 0;
+    }
+    .logo, .phone-block {
+        display: block;
+        margin: 0 auto;
+    }
+    .form-top form {
+        width: 450px;
+    }
+    .form-top {
+        padding-bottom: 320px;
+        background: url('../images/girl-small.png') no-repeat center bottom, url('../images/background-header.jpg') no-repeat 90% 0;
+        background-size: auto 310px, auto 100%;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .why-we ul {
+        margin-left: 15%;
+    }
+    .for-whom ul li {
+        margin-left: 100px;
+        margin-bottom: 20px;
+    }
+    .in-cabinet ul li {
+        display: block;
+        margin: 0 auto 100px;
+        list-style: none;
+    }
+    .in-cabinet ul .hidden {
+        display: none;
+    }
+    .in-cabinet i {
+        display: block;
+        margin: 30px auto 0;
+    }
+    .in-cabinet .hover-layer .text-white {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #4eb7dd;
+        font-size: 18px;
+        line-height: 1;
+        margin-top: -45px;
+    }
+    .in-cabinet .hover-layer .text-white:before {
+        content: '';
+        display: block;
+        width: 79px;
+        height: 74px;
+        margin: auto;
+        background: url('../images/zoom-blue.png') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .contacts ul {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 10px;
+    }
+    .contacts ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .contacts form {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .contacts form .form-field-wrap {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .contacts form .form-submit {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding-top: 50px;
+    }
+    .form-top form {
+        width: 300px;
+    }
+    .why-we ul {
+        width: auto;
+        margin-left: 60px;
+    }
+    .for-whom ul li {
+        margin-left: 75px;
+        margin-bottom: 50px;
+    }
+    .lessons-plan ul li {
+        margin-left: 80px;
+    }
+    .contacts form {
+        width: 95%;
+    }
+    .contacts form .form-field-wrap {
+        width: 90%;
+    }
+    .social li {
+        margin: 0 10px;
+    }
 }

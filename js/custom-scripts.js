@@ -8,34 +8,47 @@ $(document).ready(function () {
     });
     /*** the end of the scroll script ***/
 
+    /** nav-menu script **/
+    $('.nav-icon').click(function() {
+        $('nav ul').toggleClass('visible');
+    });
+    /** the end of the nav-menu script **/
+
+    /*** in-cabinet script ***/
+        $('.in-cabinet i').click(function() {
+            $(this).toggleClass('fa-angle-up fa-angle-down');
+            $('.in-cabinet ul .hidden').slideToggle();
+        });
+    /*** the end of the in-cabinet script ***/
+
     /*** sliders scripts ***/
     $('.slider-teachers').slick({
         arrows: false,
         dots: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         slidesToShow: 4,
-        slidesToScroll: 1/*,
+        slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1340,
+                breakpoint: 960,
                 settings: {
                     slidesToShow: 3
                 }
             },
             {
-                breakpoint: 1024,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 1
                 }
             }
-        ]*/
+        ]
     });
 
     $('.slider-reviews').slick({
@@ -44,27 +57,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 4000,
         slidesToShow: 1,
-        slidesToScroll: 1/*,
-         responsive: [
-         {
-         breakpoint: 1340,
-         settings: {
-         slidesToShow: 3
-         }
-         },
-         {
-         breakpoint: 1024,
-         settings: {
-         slidesToShow: 2
-         }
-         },
-         {
-         breakpoint: 800,
-         settings: {
-         slidesToShow: 1
-         }
-         }
-         ]*/
+        slidesToScroll: 1
     });
     /*** the end of sliders scripts ***/
 
