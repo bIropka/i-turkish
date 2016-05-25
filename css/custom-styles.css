@@ -103,7 +103,6 @@ h1:after {
 body {
     width: 100%;
     background: #ffffff;
-    overflow-x: hidden;
 }
 
 /* header */
@@ -811,11 +810,10 @@ nav ul li a:hover {
         display: block;
     }
     nav ul {
-        display: block;
         width: 200px;
         text-align: left;
         position: absolute;
-        right: -250px;
+        right: 0px;
         top: 60px;
         background: rgba(5, 147, 230, 0.8);
         -webkit-transition: 1s;
@@ -825,10 +823,11 @@ nav ul li a:hover {
         transition: 1s;
     }
     nav .visible {
-        right: 0;
+        height: auto;
     }
     nav ul li {
-        display: block;
+        display: none;
+        list-style: none;
     }
     nav ul li a {
         color: #ffffff;

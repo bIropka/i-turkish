@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     /** nav-menu script **/
     $('.nav-icon').click(function() {
-        $('nav ul').toggleClass('visible');
+        $('nav ul li').slideToggle();
     });
     /** the end of the nav-menu script **/
 
@@ -60,5 +60,13 @@ $(document).ready(function () {
         slidesToScroll: 1
     });
     /*** the end of sliders scripts ***/
+
+    /**** animation scripts *****/
+    window.sr = ScrollReveal();
+    sr.reveal('.steps ul li', {
+        reset: true,
+        mobile: false
+    });
+    /** end of animation scripts **/
 
 });
