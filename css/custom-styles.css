@@ -23,7 +23,19 @@ button, input[type="submit"] {
     cursor: pointer;
 }
 
-a, a:hover, a:active, button::-moz-focus-inner, button, button:hover, button:active, input, input:hover, input:active {
+a, a:hover, a:active {
+    outline: none;
+    border: none;
+}
+button, button:hover, button:active {
+    outline: none;
+    border: none;
+}
+button::-moz-focus-inner {
+    outline: none;
+    border: none;
+}
+input, input:hover, input:active, input:focus {
     outline: none;
     border: none;
 }
@@ -256,8 +268,8 @@ nav ul li a:hover {
     font-size: 19px;
     position: relative;
     height: 51px;
-    line-height: 51px;
-    margin-left: 150px;
+    line-height: 1;
+    margin-left: 140px;
 }
 .for-whom ul li:before {
     content: '';
@@ -266,7 +278,7 @@ nav ul li a:hover {
     height: 51px;
     position: absolute;
     left: -60px;
-    top: 0;
+    top: -15px;
 }
 .for-whom ul li:nth-child(1):before {
     background: url('../images/sprite-white.png') no-repeat -2% center;
@@ -737,6 +749,7 @@ nav ul li a:hover {
 .social li a:hover i {
     color: #ffffff;
 }
+
 /* media-queries */
 @media (max-width: 1280px) {
 .form-top {
