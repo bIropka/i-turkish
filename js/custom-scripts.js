@@ -15,10 +15,32 @@ $(document).ready(function () {
     /** the end of the nav-menu script **/
 
     /*** in-cabinet script ***/
-        $('.in-cabinet i').click(function() {
-            $(this).toggleClass('fa-angle-up fa-angle-down');
-            $('.in-cabinet ul .hidden').slideToggle();
-        });
+    $('.in-cabinet ul li').hover(
+        function() {
+            if($(window).width() > 960){
+                var layer = $(this);
+                layer.find('.hover-layer').stop().fadeIn(1000);
+                setTimeout(function() {
+                    layer.find('.icon').stop().fadeIn();
+                }, 500);
+                setTimeout(function() {
+                    layer.find('.text-white').stop().fadeIn();
+                }, 1000);
+            }
+        },
+        function() {
+            if($(window).width() > 960){
+                $(this).find('.hover-layer').css('display', 'none');
+                $(this).find('.text-white').css('display', 'none');
+                $(this).find('.icon').css('display', 'none');
+            }
+        }
+    );
+
+    $('.in-cabinet i').click(function() {
+        $(this).toggleClass('fa-angle-up fa-angle-down');
+        $('.in-cabinet ul .hidden').slideToggle();
+    });
     /*** the end of the in-cabinet script ***/
 
     /*** sliders scripts ***/

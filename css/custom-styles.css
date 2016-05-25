@@ -86,11 +86,13 @@ h2 {
     font-size: 30px;
     line-height: 1;
     color: #333333;
+    font-family: "Muse-100", sans-serif;
 }
 h1 {
     font-size: 38px;
     line-height: 1.2;
     color:#0199cf;
+    font-family: "Muse-500", sans-serif;
 }
 h1:after {
     content: '';
@@ -106,7 +108,8 @@ body {
 }
 
 /* header */
-.header {
+.header .block-content {
+    max-width: 1040px;
     padding: 35px 0 25px;
 }
 .header:after {
@@ -127,6 +130,7 @@ body {
     text-align: right;
     padding: 40px 15px 0 0;
     float: left;
+    text-decoration: none;
 }
 nav {
     display: inline-block;
@@ -162,24 +166,31 @@ nav ul li a:hover {
 .phone-number {
     font-family: "HelveticaNeueCyr Roman", sans-serif;
     font-size: 18px;
+    letter-spacing: 1px;
     color: #0199cf;
 }
 .get-callback {
-    width: 155px;
-    height: 30px;
-    line-height: 30px;
+    padding: 10px 20px;
     background: #4eb7dd;
     text-transform: uppercase;
     margin-top: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 .get-callback:hover {
-    background: #0199cf;
+    background: #1689b2;
 }
 
 /* form-top */
 .form-top {
-    background: url('../images/girl.png') no-repeat 75% bottom, url('../images/background-header.jpg') no-repeat center;
-    background-size: auto 98%, cover;
+    background: url('../images/background-header.jpg') no-repeat center;
+    background-size: cover;
+}
+.form-top .block-content {
+    padding: 125px 0;
+    background: url('../images/girl.png') no-repeat right bottom;
+    background-size: auto 95%;
 }
 .form-top form {
     margin-left: 90px;
@@ -191,6 +202,7 @@ nav ul li a:hover {
     width: 90%;
     font-size: 15px;
     margin-bottom: 15px;
+    font-family: "OpenSans Regular", sans-serif;
 }
 .form-field-wrap {
     display: block;
@@ -211,9 +223,6 @@ nav ul li a:hover {
 }
 
 /* about-us */
-.why-we h2 {
-    font-family: "Muse-100", sans-serif;
-}
 .why-we h2:after {
     content: '';
     display: block;
@@ -265,6 +274,9 @@ nav ul li a:hover {
  /* for-whom */
 .for-whom {
     background: #4eb7dd;
+}
+.for-whom h2, .steps h2, .contacts h2 {
+    font-family: "Muse-300", sans-serif;
 }
 .for-whom h2:after {
     content: '';
@@ -335,9 +347,7 @@ nav ul li a:hover {
     overflow: hidden;
     position: relative;
     margin: 5px;
-}
-.in-cabinet ul li:hover .hover-layer {
-    display: block;
+    cursor: pointer;
 }
 .in-cabinet ul li>img, .steps ul li img {
     display: block;
@@ -354,13 +364,14 @@ nav ul li a:hover {
     background: rgba(5, 147, 230, 0.64);
     cursor: pointer;
 }
+
 .in-cabinet .hover-layer .text-white {
+    display: none;
     font-size: 20px;
     text-transform: uppercase;
 }
-.in-cabinet .hover-layer .text-white:before {
-    content: '';
-    display: block;
+.in-cabinet .hover-layer .icon {
+    display: none;
     width: 55px;
     height: 51px;
     margin: 65px auto 20px;
@@ -396,6 +407,8 @@ nav ul li a:hover {
     margin: 0 30px;
 }
 .slider-teachers .slide img {
+    width: 180px;
+    height: auto;
     margin: 0 auto;
 }
 .teacher-name {
@@ -436,6 +449,8 @@ nav ul li a:hover {
     background-size: cover;
 }
 .slider-reviews .slide img {
+    width: 150px;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -844,13 +859,6 @@ nav ul li a:hover {
 }
 
 /* media-queries */
-@media (max-width: 1280px) {
-    .form-top {
-        background: url('../images/girl.png') no-repeat 85% bottom, url('../images/background-header.jpg') no-repeat center;
-        background-size: auto 98%, cover;
-    }
-}
-
 @media (max-width: 1080px) {
     .why-we ul {
         display: block;
@@ -865,9 +873,6 @@ nav ul li a:hover {
         text-align: left;
         position: relative;
     }
-}
-
-@media (max-width: 960px) {
     .header {
         padding: 20px 0 0 0;
         position: relative;
@@ -903,10 +908,17 @@ nav ul li a:hover {
         margin: 20px;
         float: none;
     }
+}
+
+@media (max-width: 960px) {
     .form-top {
-        padding-bottom: 480px;
-        background: url('../images/girl-small.png') no-repeat center bottom, url('../images/background-header.jpg') no-repeat 90% 0;
-        background-size: auto 470px, auto 100%;
+        background: url('../images/background-header.jpg') no-repeat right;
+        background-size: cover;
+    }
+    .form-top .block-content {
+        padding: 125px 0 460px;
+        background: url('../images/girl-small.png') no-repeat center bottom;
+        background-size: auto 430px;
     }
     .form-top form {
         margin: 0 auto;
@@ -924,9 +936,11 @@ nav ul li a:hover {
         background: transparent;
     }
     .in-cabinet .hover-layer .text-white {
+        display: block;
         color: #4eb7dd;
     }
-    .in-cabinet .hover-layer .text-white:before {
+    .in-cabinet .hover-layer .icon {
+        display: block;
         width: 79px;
         height: 74px;
         background: url('../images/zoom-blue.png') no-repeat center;
@@ -935,12 +949,19 @@ nav ul li a:hover {
     .program table td:first-child {
         padding: 0 5px;
         font-size: 12px;
+        color: #333333;
+        font-family: "OpenSans Semibold", sans-serif;
     }
 }
 
 @media (max-width: 768px) {
-    .program {
-        display: none;
+    .program table th {font-size: 16px;}
+    .program table th:nth-child(1) {width: 40%;}
+    .program table th:nth-child(2) {width: 20%;}
+    .program table th:nth-child(3) {width: 20%;}
+    .program table th:nth-child(4) {width: 20%;}
+    .program table tr:nth-child(13) td, .program table tr:nth-child(13) td span {
+        font-size: 18px;
     }
     .steps ul li {
         width: 300px;
@@ -993,11 +1014,6 @@ nav ul li a:hover {
     .form-top form {
         width: 450px;
     }
-    .form-top {
-        padding-bottom: 320px;
-        background: url('../images/girl-small.png') no-repeat center bottom, url('../images/background-header.jpg') no-repeat 90% 0;
-        background-size: auto 310px, auto 100%;
-    }
     h1 {
         font-size: 32px;
     }
@@ -1029,8 +1045,7 @@ nav ul li a:hover {
         line-height: 1;
         margin-top: -45px;
     }
-    .in-cabinet .hover-layer .text-white:before {
-        content: '';
+    .in-cabinet .hover-layer .icon {
         display: block;
         width: 79px;
         height: 74px;
@@ -1064,6 +1079,21 @@ nav ul li a:hover {
     }
     .contacts form .form-submit {
         margin-top: 10px;
+    }
+    .program table {width: 95%;}
+    .program table th {font-size: 12px;}
+    .program table th:nth-child(1) {width: 55%;}
+    .program table th:nth-child(2) {width: 15%;}
+    .program table th:nth-child(3) {width: 15%;}
+    .program table th:nth-child(4) {width: 15%;}
+    .program table tr:nth-child(13) td, .program table tr:nth-child(13) td span {
+        font-size: 16px;
+    }
+    .program table button {
+        width: 90%;
+        font-size: 12px;
+        height: 35px;
+        line-height: 35px;
     }
 }
 
@@ -1109,5 +1139,23 @@ nav ul li a:hover {
     }
     .modal-form .text-grey {
         font-size: 15px;
+    }
+    .program table th {font-size: 10px;height: 50px;}
+    .program table th:nth-child(1) {width: 40%;}
+    .program table th:nth-child(2) {width: 20%;}
+    .program table th:nth-child(3) {width: 20%;}
+    .program table th:nth-child(4) {width: 20%;}
+    .program table tr:nth-child(13) td, .program table tr:nth-child(13) td span {
+        font-size: 14px;
+        height: 50px;
+    }
+    .program table button {
+        font-size: 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .program table td:first-child {
+        padding: 0 3px;
+        font-size: 10px;
     }
 }
