@@ -164,13 +164,13 @@ nav ul li a:hover {
     font-size: 15px;
     margin-bottom: 15px;
 }
-.form-top .form-field-wrap {
+.form-field-wrap {
     display: block;
     width: 270px;
     height: 40px;
     margin-bottom: 10px;
 }
-.form-top .form-field {
+.form-field {
     width: 100%;
     height: 100%;
     padding-left: 15px;
@@ -586,7 +586,157 @@ nav ul li a:hover {
 .steps ul li:last-child:after {
     display: none;
 }
+.get-first-lesson {
+    width: 315px;
+    height: 40px;
+    line-height: 40px;
+    background: #ffffff;
+    text-transform: uppercase;
+    color: #0199cf;
+    margin-top: 90px;
+}
+.get-first-lesson:hover {
+    background: #ff3a3a;
+    color: #ffffff;
+}
+.get-first-lesson:active {
+    line-height: 42px;
+}
 
+/* lessons-plan */
+.lessons-plan ul li {
+    display: block;
+    text-align: left;
+    margin-left: 220px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.lessons-plan ul li:before {
+    content: '1';
+    font-family: "Muse-500", sans-serif;
+    font-size: 80px;
+    color: #3393ff;
+    position: absolute;
+    left: -70px;
+    top: -15px;
+}
+.lessons-plan ul li:nth-child(2):before {
+    content: '2';
+}
+.lessons-plan ul li:nth-child(3):before {
+    content: '3';
+}
+.lessons-plan .sub-title {
+    font-family: "Muse-500", sans-serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.lessons-plan .text {
+    font-family: "OpenSans Light", sans-serif;
+    font-size: 15px;
+}
+
+/* contacts */
+.contacts {
+    background: #4eb7dd;
+}
+.contacts h2:after {
+    content: '';
+    display: block;
+    width: 70px;
+    border-top: 3px solid #ffffff;
+    margin: 35px auto 50px;
+}
+.contacts ul {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 50px 0 90px;
+    text-align: left;
+}
+.contacts ul li {
+    display: block;
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.contacts ul li a {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.contacts ul li a:hover {
+    text-decoration: underline;
+}
+.contacts ul li i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 25px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+.contacts form {
+    display: inline-block;
+    vertical-align: top;
+    width: 630px;
+    height: 290px;
+    background: #ffffff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 35px 0 35px 30px;
+    text-align: left;
+}
+.contacts form .title {
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.contacts form .text {
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 15px;
+    margin: 15px 0 25px;
+}
+.contacts form .form-field-wrap {
+    display: inline-block;
+    margin: 0 25px 0 0;
+}
+.contacts form .form-submit {
+    display: block;
+    width: 140px;
+    margin: 25px 0 0 0;
+}
+
+/* footer */
+.footer {
+    background: #ebebeb;
+}
+.footer .block-content {
+    padding: 20px 0;
+}
+.social li {
+    margin: 0 30px;
+}
+.social li a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 26px;
+    text-align: center;
+    background: transparent;
+}
+.social li a i {
+    color: #9cc9d9;
+}
+.social li a:hover {
+    background: #9cc9d9;
+}
+.social li a:hover i {
+    color: #ffffff;
+}
 /* media-queries */
 @media (max-width: 1280px) {
 .form-top {
