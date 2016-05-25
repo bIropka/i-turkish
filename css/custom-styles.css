@@ -311,7 +311,7 @@ nav ul li a:hover {
 .in-cabinet ul li:hover .hover-layer {
     display: block;
 }
-.in-cabinet ul li img {
+.in-cabinet ul li img, .steps ul li img {
     display: block;
     width: 100%;
     height: auto;
@@ -408,11 +408,184 @@ nav ul li a:hover {
 }
 
 /* program */
+.program table {
+    width: 85%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.program table th {
+    width: 25%;
+    height: 70px;
+    background: #4eb7dd;
+    border: 1px solid #dadada;
+    border-right: none;
+    color: #ffffff;
+    font-family: "Muse-300", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.program table th:last-child {
+    border-right: 1px solid #dadada;
+}
+.program table td {
+    height: 60px;
+    border: 1px solid #dadada;
+    border-top: none;
+    border-right: none;
+}
+.program table td:last-child {
+    border-right: 1px solid #dadada;
+}
+.program table td:first-child {
+    text-align: left;
+    padding: 0 10px;
+    font-family: "OpenSans Light", sans-serif;
+    color: #666666;
+}
+.program table tr:nth-child(13) td:first-child {
+    text-align: center;
+}
+.program table tr:nth-child(13) td, .program table tr:nth-child(13) td span {
+    background: #e8e8e8;
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.program table tr:nth-child(13) td span {
+    margin-right: 5px;
+}
+.program table tr:nth-child(13) td:nth-child(3) i, .program table tr:nth-child(13) td:nth-child(3) span {
+    color: #f1554e;
+}
+.icon-yes {
+    display: block;
+    width: 21px;
+    height: 17px;
+    background: url('../images/sprite-ok-no.png') no-repeat left center;
+    background-size: cover;
+    margin: auto;
+}
+.icon-no {
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url('../images/sprite-ok-no.png') no-repeat right center;
+    background-size: cover;
+    margin: auto;
+}
+.program table button {
+    width: 170px;
+}
+.button-grey {
+    height: 40px;
+    line-height: 40px;
+    background: #8e8e8e;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.button-grey:hover {
+    background: #bababa;
+}
+.button-grey:active {
+    line-height: 42px;
+}
 
-
-
-
-
+/* steps */
+.steps {
+    background: #4eb7dd;
+}
+.steps h2:after {
+    content: '';
+    display: block;
+    width: 70px;
+    border-top: 3px solid #ffffff;
+    margin: 35px auto 130px;
+}
+.steps ul li {
+    display: block;
+    width: 165px;
+    height: 155px;
+    position: relative;
+    margin: 0 auto 200px;
+}
+.steps ul li:last-child {
+    margin-bottom: 0;
+}
+.step-info {
+    display: block;
+    width: 240px;
+    position: absolute;
+    left: -320px;
+    top: 5px;
+    text-align: right;
+}
+.steps ul li:nth-child(1) .step-info {
+    top: 40px;
+}
+.steps ul li:nth-child(2n) .step-info {
+    left: auto;
+    right: -320px;
+    text-align: left;
+}
+.steps ul li:nth-child(1) .step-icon {
+    display: block;
+    width: 93px;
+    height: 28px;
+    margin: 0 0 20px 145px;
+    background: url('../images/icon-step-1.png') no-repeat center;
+    background-size: cover;
+}
+.steps ul li:nth-child(2) .step-icon {
+    display: block;
+    width: 94px;
+    height: 50px;
+    margin: 0 0 5px 5px;
+    background: url('../images/icon-step-2.png') no-repeat center;
+    background-size: cover;
+}
+.steps ul li:nth-child(3) .step-icon {
+    display: block;
+    width: 58px;
+    height: 51px;
+    margin: 0 0 25px 180px;
+    background: url('../images/icon-step-3.png') no-repeat center;
+    background-size: cover;
+}
+.steps ul li:nth-child(4) .step-icon {
+    display: block;
+    width: 58px;
+    height: 75px;
+    margin: 0 0 10px 5px;
+    background: url('../images/icon-step-4.png') no-repeat center;
+    background-size: cover;
+}
+.step-name {
+    font-family: "Muse-500", sans-serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+.step-text {
+    font-family: "Muse-300", sans-serif;
+}
+.steps ul li:after {
+    content: '';
+    display: block;
+    width: 423px;
+    height: 157px;
+    margin: auto;
+    position: absolute;
+    left: -129px;
+    bottom: -180px;
+    background: url('../images/arrow-left-right.png') no-repeat center;
+    background-size: cover;
+}
+.steps ul li:nth-child(2):after {
+    background: url('../images/arrow-right-left.png') no-repeat center;
+    background-size: cover;
+}
+.steps ul li:last-child:after {
+    display: none;
+}
 
 /* media-queries */
 @media (max-width: 1280px) {
