@@ -61,6 +61,18 @@ $(document).ready(function () {
     });
     /*** the end of sliders scripts ***/
 
+    /*** window-callback ***/
+    $('.get-callback').click(function () {
+        $('.window').fadeIn();
+    });
+
+    $('.window').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.modal-form')).length) $('.window').fadeOut();
+        if ($target.hasClass('close-marker')) $('.window').fadeOut();
+    });
+    /*** the end of the window-callback script ***/
+
     /**** animation scripts *****/
     window.sr = ScrollReveal();
     sr.reveal('.steps ul li', {
@@ -68,5 +80,8 @@ $(document).ready(function () {
         mobile: false
     });
     /** end of animation scripts **/
+
+    /*** image zoom ***/
+    /*** end of image zoom ***/
 
 });
