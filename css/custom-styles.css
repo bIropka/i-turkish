@@ -339,7 +339,7 @@ nav ul li a:hover {
 .in-cabinet ul li:hover .hover-layer {
     display: block;
 }
-.in-cabinet ul li img, .steps ul li img {
+.in-cabinet ul li>img, .steps ul li img {
     display: block;
     width: 100%;
     height: auto;

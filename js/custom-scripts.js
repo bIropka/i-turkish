@@ -82,6 +82,7 @@ $(document).ready(function () {
     /** end of animation scripts **/
 
     /*** image zoom ***/
+
     /*** end of image zoom ***/
 
 });
