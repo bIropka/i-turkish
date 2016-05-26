@@ -781,7 +781,7 @@ nav ul li a:hover {
     padding: 20px 0;
 }
 .social li {
-    margin: 0 30px;
+    margin: 0 30px 40px;
 }
 .social li a {
     display: block;
@@ -800,6 +800,21 @@ nav ul li a:hover {
 }
 .social li a:hover i {
     color: #ffffff;
+}
+.footer .footer-links a {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #0199cf;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.footer .footer-links a:hover {
+    text-decoration: underline;
+}
+.footer .footer-links {
+    text-align: left;
 }
 
 /* modal window */
