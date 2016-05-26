@@ -47,10 +47,11 @@ $(document).ready(function () {
     $('.slider-teachers').slick({
         arrows: false,
         dots: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         slidesToShow: 4,
         slidesToScroll: 1,
+        infinity: true,
         responsive: [
             {
                 breakpoint: 960,
@@ -79,6 +80,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 4000,
         slidesToShow: 1,
+        infinity: true,
         slidesToScroll: 1
     });
     /*** the end of sliders scripts ***/
