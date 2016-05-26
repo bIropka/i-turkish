@@ -393,8 +393,13 @@ nav ul li a:hover {
     user-select: none;
 }
 .in-cabinet .button-red {
+    display: inline-block;
     width: 270px;
     margin-top: 90px;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 /* teachers */
@@ -644,6 +649,7 @@ nav ul li a:hover {
     display: none;
 }
 .get-first-lesson {
+    display: inline-block;
     width: 315px;
     height: 40px;
     line-height: 40px;
@@ -651,6 +657,10 @@ nav ul li a:hover {
     text-transform: uppercase;
     color: #0199cf;
     margin-top: 90px;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 .get-first-lesson:hover {
     background: #ff3a3a;
